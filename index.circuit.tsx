@@ -7,7 +7,7 @@ import { CC0603KRX7R9BB104 as C100N } from "./imports/CC0603KRX7R9BB104";
 import { CL10A105KB8NNNC as C1U } from "./imports/CL10A105KB8NNNC";
 import { CL10A106KP8NNNC as C10U } from "./imports/CL10A106KP8NNNC";
 import { DRV2605LDGSR } from "./imports/DRV2605LDGSR";
-import { HS96L03W2C03 } from "./imports/HS96L03W2C03";
+import { HS242L03B2C01 } from "./imports/HS242L03B2C01";
 import { LCM04084521_B1 } from "./imports/LCM04084521_B1";
 import { MAX9814ETD_T } from "./imports/MAX9814ETD_T";
 import { ME6211C33M5G_N } from "./imports/ME6211C33M5G_N";
@@ -23,66 +23,64 @@ import { WS2812B_2020 } from "./imports/WS2812B_2020";
 import { X322512MSB4SI } from "./imports/X322512MSB4SI";
 
 const tp = [
-	["TP_3V3", "V3_3", -40, -29],
-	["TP_VBUS", "VBUS_5V", -36, -29],
-	["TP_GND", "GND", -32, -29],
-	["TP_DP", "USB_DP", -28, -29],
-	["TP_DM", "USB_DM", -24, -29],
-	["TP_SDA", "SDA", 22, -27],
-	["TP_SCL", "SCL", 26, -27],
-	["TP_AUDIO", "AUDIO_ADC", 30, -27],
-	["TP_RGB", "RGB_DATA", 34, -27],
-	["TP_HAPTIC", "HAPTIC_TRIG", 38, -27],
-	["TP_SWDIO", "SWDIO", -39, 7],
-	["TP_SWCLK", "SWCLK", -39, 5],
-	["TP_RUN", "RUN", -39, -1],
+	["TP_3V3", "V3_3", -45, -32],
+	["TP_VBUS", "VBUS_5V", -41, -32],
+	["TP_GND", "GND", -37, -32],
+	["TP_DP", "USB_DP", -33, -32],
+	["TP_DM", "USB_DM", -29, -32],
+	["TP_SDA", "SDA", 29, -32],
+	["TP_SCL", "SCL", 33, -32],
+	["TP_AUDIO", "AUDIO_ADC", 37, -32],
+	["TP_RGB", "RGB_DATA", 41, -32],
+	["TP_HAPTIC", "HAPTIC_TRIG", 45, -32],
+	["TP_SWDIO", "SWDIO", -47.4, 4],
+	["TP_SWCLK", "SWCLK", -47.4, 1],
+	["TP_RUN", "RUN", -47.4, -2],
 ] as const;
 
 function MechanicsAndTestPads() {
 	return (
 		<>
-			<hole name="MH1" diameter="2.6mm" pcbX={-40} pcbY={27} />
-			<hole name="MH2" diameter="2.6mm" pcbX={38} pcbY={25} />
-			<hole name="STRAP1" diameter="3.4mm" pcbX={0} pcbY={26} />
+			<hole name="STRAP1" diameter="3.4mm" pcbX={0} pcbY={30} />
 			<silkscreentext
 				text="VIBE GOBLIN"
 				pcbX={0}
-				pcbY={28}
+				pcbY={31.5}
 				fontSize="1.5mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="sound in, buzz out"
 				pcbX={0}
-				pcbY={24.7}
+				pcbY={28.5}
 				fontSize="0.85mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="boop to mute"
-				pcbX={-35}
-				pcbY={14.5}
+				pcbX={-42}
+				pcbY={30}
 				fontSize="0.75mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="tiny chaos listener"
 				pcbX={0}
-				pcbY={-27.8}
+				pcbY={-30.8}
 				fontSize="0.85mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="not a certified emergency alarm"
 				pcbX={0}
-				pcbY={-26.4}
+				pcbY={-29.4}
 				fontSize="0.7mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="ASSISTIVE PROTOTYPE - NOT A CERTIFIED EMERGENCY ALARM"
 				pcbX={0}
-				pcbY={-29}
+				pcbY={-32}
 				fontSize="0.6mm"
 				anchorAlignment="center"
 			/>
@@ -109,62 +107,62 @@ function PowerBlock() {
 			<TYPE_C_31_M_12
 				name="J1"
 				pcbX={0}
-				pcbY={-25.2}
-				pcbRotation={180}
+				pcbY={-29}
+				pcbRotation={0}
 				schSectionName="USB-C and Power"
 			/>
 			<USBLC6_2SC6
 				name="D1"
-				pcbX={-10.5}
-				pcbY={-21.8}
+				pcbX={-12}
+				pcbY={-26.4}
 				schSectionName="USB-C and Power"
 			/>
 			<ME6211C33M5G_N
 				name="U2"
-				pcbX={-34}
-				pcbY={-20}
+				pcbX={-42}
+				pcbY={-25}
 				schSectionName="USB-C and Power"
 			/>
 			<R5K1
 				name="R1_CC1"
 				pcbX={-8.5}
-				pcbY={-25.8}
+				pcbY={-31.5}
 				schSectionName="USB-C and Power"
 			/>
 			<R5K1
 				name="R2_CC2"
 				pcbX={8.5}
-				pcbY={-24.2}
+				pcbY={-31.5}
 				schSectionName="USB-C and Power"
 			/>
 			<R27
 				name="R3_USB_DP"
 				pcbX={-8}
-				pcbY={-18.2}
+				pcbY={-24}
 				schSectionName="USB-C and Power"
 			/>
 			<R27
 				name="R4_USB_DM"
 				pcbX={-4.6}
-				pcbY={-18.2}
+				pcbY={-24}
 				schSectionName="USB-C and Power"
 			/>
 			<C10U
 				name="C1_LDO_IN"
-				pcbX={-38}
-				pcbY={-20}
+				pcbX={-45}
+				pcbY={-29}
 				schSectionName="USB-C and Power"
 			/>
 			<C10U
 				name="C2_LDO_OUT"
-				pcbX={-30}
-				pcbY={-20}
+				pcbX={-36}
+				pcbY={-28}
 				schSectionName="USB-C and Power"
 			/>
 			<C100N
 				name="C3_LDO_BYP"
-				pcbX={-34}
-				pcbY={-16.5}
+				pcbX={-39.5}
+				pcbY={-28.5}
 				schSectionName="USB-C and Power"
 			/>
 			<trace from=".J1 > .A1B12" to="net.GND" />
@@ -206,69 +204,70 @@ function RP2040CoreBlock() {
 	return (
 		<>
 			<schematicsection name="RP2040 Core" />
-			<RP2040 name="U1" pcbX={-20} pcbY={-3} schSectionName="RP2040 Core" />
+			<RP2040
+				name="U1"
+				pcbX={-14}
+				pcbRotation={90}
+				pcbY={0}
+				schSectionName="RP2040 Core"
+			/>
 			<W25Q16JVSSIQ
 				name="U3"
-				pcbX={-31}
-				pcbY={-3}
+				pcbX={-26}
+				pcbY={0}
 				pcbRotation={90}
 				schSectionName="RP2040 Core"
 			/>
 			<X322512MSB4SI
 				name="Y1"
-				pcbX={-12}
-				pcbY={-14}
+				pcbX={-2}
+				pcbY={-15}
 				schSectionName="RP2040 Core"
 			/>
 			<TS_1187A_B_A_B
 				name="SW1_BOOTSEL"
-				pcbX={-37}
-				pcbY={-26}
+				pcbX={-44.3}
+				pcbY={-17}
 				schSectionName="RP2040 Core"
 			/>
 			<TS_1187A_B_A_B
 				name="SW2_RUN"
-				pcbX={-28}
-				pcbY={-26}
+				pcbX={-44.3}
+				pcbY={-9}
 				schSectionName="RP2040 Core"
 			/>
 			<R10K
 				name="R5_RUN_PULLUP"
-				pcbX={-21.5}
-				pcbY={-20}
+				pcbX={-32}
+				pcbY={-10}
 				schSectionName="RP2040 Core"
 			/>
 			<R10K
 				name="R6_FLASH_CS_PULLUP"
-				pcbX={-39}
-				pcbY={-5}
+				pcbX={-32}
+				pcbY={6.5}
 				schSectionName="RP2040 Core"
 			/>
-			<C33P
-				name="C4_XIN"
-				pcbX={-18.5}
-				pcbY={-13}
-				schSectionName="RP2040 Core"
-			/>
+			<C33P name="C4_XIN" pcbX={-5.5} pcbY={-19} schSectionName="RP2040 Core" />
 			<C33P
 				name="C5_XOUT"
-				pcbX={-18.5}
-				pcbY={-16}
+				pcbX={-1.5}
+				pcbY={-19}
 				schSectionName="RP2040 Core"
 			/>
 			{decouplers.map((name, i) => (
 				<C100N
 					key={name}
 					name={name}
-					pcbX={[-27, -23.5, -17.5, -20, -27, -23.5, -16][i]}
-					pcbY={[4.5, 4.5, 4.5, 7.5, -11.8, -11.8, -8.5][i]}
+					pcbX={[-25, -20, -7, -12, -25, -20, -7][i]}
+					pcbY={[8, 8, 7, 11, -8, -8, -7][i]}
 					schSectionName="RP2040 Core"
 				/>
 			))}
 			<C1U
 				name="C13_VREG_OUT"
-				pcbX={-23.5}
-				pcbY={-14.5}
+				pcbX={-18}
+				pcbY={-12}
 				schSectionName="RP2040 Core"
 			/>
 			<pinheader
@@ -276,8 +275,9 @@ function RP2040CoreBlock() {
 				pinCount={5}
 				pinLabels={["3V3", "SWDIO", "SWCLK", "RUN", "GND"]}
 				showSilkscreenPinLabels
-				pcbX={-38}
-				pcbY={2}
+				pcbX={-42}
+				pcbRotation={90}
+				pcbY={6}
 				schSectionName="RP2040 Core"
 			/>
 			<trace from=".U1 > .GND" to="net.GND" />
@@ -347,15 +347,15 @@ function RP2040CoreBlock() {
 			<trace from=".J2_SWD > .GND" to="net.GND" />
 			<silkscreentext
 				text="BOOTSEL"
-				pcbX={-37}
-				pcbY={-29}
+				pcbX={-44.3}
+				pcbY={-22}
 				fontSize="0.7mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="RESET"
-				pcbX={-28}
-				pcbY={-29}
+				pcbX={-44.3}
+				pcbY={-3}
 				fontSize="0.7mm"
 				anchorAlignment="center"
 			/>
@@ -369,8 +369,8 @@ function MicInputBlock() {
 			<schematicsection name="Microphone Input" />
 			<MAX9814ETD_T
 				name="U4"
-				pcbX={-32}
-				pcbY={20}
+				pcbX={-10}
+				pcbY={19}
 				schSectionName="Microphone Input"
 			/>
 			<pinheader
@@ -379,8 +379,8 @@ function MicInputBlock() {
 				pitch="2.54mm"
 				pinLabels={["MICBIAS", "MICIN"]}
 				showSilkscreenPinLabels
-				pcbX={-32}
-				pcbY={26}
+				pcbX={-31}
+				pcbY={28.5}
 				schSectionName="Microphone Input"
 			/>
 			<resistor
@@ -388,20 +388,20 @@ function MicInputBlock() {
 				resistance="1k"
 				footprint="0603"
 				supplierPartNumbers={{ jlcpcb: ["C21190"] }}
-				pcbX={-27.5}
-				pcbY={17.2}
+				pcbX={-28}
+				pcbY={19}
 				schSectionName="Microphone Input"
 			/>
 			<C100N
 				name="C14_ADC_FILTER"
-				pcbX={-23.5}
-				pcbY={17.2}
+				pcbX={-23}
+				pcbY={19}
 				schSectionName="Microphone Input"
 			/>
 			<C100N
 				name="C15_MIC_DECOUPLE"
-				pcbX={-28}
-				pcbY={20}
+				pcbX={-29}
+				pcbY={23}
 				schSectionName="Microphone Input"
 			/>
 			<trace from=".U4 > .VDD" to="net.V3_3" />
@@ -420,14 +420,14 @@ function MicInputBlock() {
 			<silkscreentext
 				text="SOUND HOLE"
 				pcbX={-32}
-				pcbY={28.5}
+				pcbY={31.5}
 				fontSize="0.75mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="MIC1 DNP / HAND SOLDER"
-				pcbX={-32}
-				pcbY={23.8}
+				pcbX={-25}
+				pcbY={22.5}
 				fontSize="0.65mm"
 				anchorAlignment="center"
 			/>
@@ -441,38 +441,39 @@ function HapticBlock() {
 			<schematicsection name="Haptic Vibration" />
 			<DRV2605LDGSR
 				name="U5"
-				pcbX={26}
-				pcbY={-3}
+				pcbX={34}
+				pcbY={-27}
+				pcbRotation={270}
 				schSectionName="Haptic Vibration"
 			/>
 			<LCM04084521_B1
 				name="M1"
-				pcbX={0}
-				pcbY={-15}
+				pcbX={20}
+				pcbY={-28}
 				schSectionName="Haptic Vibration"
 			/>
 			<R4K7
 				name="R8_SDA_PULLUP"
-				pcbX={22}
-				pcbY={2.5}
+				pcbX={38}
+				pcbY={-20.5}
 				schSectionName="Haptic Vibration"
 			/>
 			<R4K7
 				name="R9_SCL_PULLUP"
-				pcbX={27}
-				pcbY={2.5}
+				pcbX={43}
+				pcbY={-20.5}
 				schSectionName="Haptic Vibration"
 			/>
 			<C100N
 				name="C16_HAPTIC_100N"
-				pcbX={31}
-				pcbY={1}
+				pcbX={43}
+				pcbY={-25}
 				schSectionName="Haptic Vibration"
 			/>
 			<C1U
 				name="C17_HAPTIC_1U"
-				pcbX={26}
-				pcbY={-8}
+				pcbX={34}
+				pcbY={-30}
 				schSectionName="Haptic Vibration"
 			/>
 			<trace from=".U5 > .SDA" to="net.SDA" />
@@ -501,39 +502,16 @@ function OledFaceBlock() {
 	return (
 		<>
 			<schematicsection name="OLED Face" />
-			<HS96L03W2C03
+			<HS242L03B2C01
 				name="OLED1"
 				pcbX={0}
-				pcbY={10}
-				schSectionName="OLED Face"
-			/>
-			<pinheader
-				name="J3_OLED_DNP"
-				pinCount={4}
-				pitch="2.54mm"
-				pinLabels={["GND", "3V3", "SDA", "SCL"]}
-				showSilkscreenPinLabels
-				pcbX={38}
-				pcbY={7}
-				pcbRotation={90}
-				doNotPlace
+				pcbY={-2}
 				schSectionName="OLED Face"
 			/>
 			<trace from=".OLED1 > .GND" to="net.GND" />
 			<trace from=".OLED1 > .VCC" to="net.V3_3" />
 			<trace from=".OLED1 > .SDA" to="net.SDA" />
 			<trace from=".OLED1 > .SCL" to="net.SCL" />
-			<trace from=".J3_OLED_DNP > .GND" to="net.GND" />
-			<trace from=".J3_OLED_DNP > .3V3" to="net.V3_3" />
-			<trace from=".J3_OLED_DNP > .SDA" to="net.SDA" />
-			<trace from=".J3_OLED_DNP > .SCL" to="net.SCL" />
-			<silkscreentext
-				text="OLED ALT DNP"
-				pcbX={38}
-				pcbY={14}
-				fontSize="0.65mm"
-				anchorAlignment="center"
-			/>
 		</>
 	);
 }
@@ -544,20 +522,20 @@ function RgbEyesBlock() {
 			<schematicsection name="RGB Eyes" />
 			<SN74AHCT1G125DBVR
 				name="U6"
-				pcbX={27}
-				pcbY={18}
+				pcbX={17}
+				pcbY={27}
 				schSectionName="RGB Eyes"
 			/>
 			<WS2812B_2020
 				name="LED1_LEFT_EYE"
-				pcbX={-10}
-				pcbY={25.5}
+				pcbX={-8}
+				pcbY={27.5}
 				schSectionName="RGB Eyes"
 			/>
 			<WS2812B_2020
 				name="LED2_RIGHT_EYE"
 				pcbX={10}
-				pcbY={25.5}
+				pcbY={27.5}
 				schSectionName="RGB Eyes"
 			/>
 			<resistor
@@ -565,12 +543,12 @@ function RgbEyesBlock() {
 				resistance="330"
 				footprint="0603"
 				supplierPartNumbers={{ jlcpcb: ["C23138"] }}
-				pcbX={23}
-				pcbY={18}
+				pcbX={13}
+				pcbY={23}
 				schSectionName="RGB Eyes"
 			/>
-			<C100N name="C18_LED1" pcbX={-14} pcbY={25.5} schSectionName="RGB Eyes" />
-			<C100N name="C19_LED2" pcbX={14} pcbY={25.5} schSectionName="RGB Eyes" />
+			<C100N name="C18_LED1" pcbX={-12} pcbY={27.5} schSectionName="RGB Eyes" />
+			<C100N name="C19_LED2" pcbX={6} pcbY={27.5} schSectionName="RGB Eyes" />
 			<trace from=".U1 > .GPIO6" to=".U6 > .A" />
 			<trace from=".U6 > .VCC" to="net.VBUS_5V" />
 			<trace from=".U6 > .GND" to="net.GND" />
@@ -598,14 +576,14 @@ function OptionalBuzzerBlock() {
 			<schematicsection name="Optional Buzzer" />
 			<PKLCS1212E4001_R1
 				name="BZ1"
-				pcbX={35}
-				pcbY={-17}
+				pcbX={28}
+				pcbY={26}
 				schSectionName="Optional Buzzer"
 			/>
 			<SK_3296S_01_L1
 				name="SW5_SOUND_ENABLE"
-				pcbX={35}
-				pcbY={-3}
+				pcbX={43.5}
+				pcbY={23}
 				schSectionName="Optional Buzzer"
 			/>
 			<resistor
@@ -613,8 +591,8 @@ function OptionalBuzzerBlock() {
 				resistance="470"
 				footprint="0603"
 				supplierPartNumbers={{ jlcpcb: ["C23179"] }}
-				pcbX={27}
-				pcbY={-17}
+				pcbX={37}
+				pcbY={14}
 				schSectionName="Optional Buzzer"
 			/>
 			<trace from=".U1 > .GPIO15" to=".R11_BUZZER_470R > .pin1" />
@@ -624,22 +602,22 @@ function OptionalBuzzerBlock() {
 			<trace from=".SW5_SOUND_ENABLE > .pin3" to="net.NO_CONNECT_SOUND_OFF" />
 			<silkscreentext
 				text="SOUND ON/OFF"
-				pcbX={35}
-				pcbY={-2.8}
+				pcbX={43.5}
+				pcbY={29}
 				fontSize="0.65mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="sound optional"
-				pcbX={35}
-				pcbY={-23}
+				pcbX={28}
+				pcbY={24.5}
 				fontSize="0.65mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="vibration is main alert"
-				pcbX={35}
-				pcbY={-24.2}
+				pcbX={28}
+				pcbY={23.3}
 				fontSize="0.6mm"
 				anchorAlignment="center"
 			/>
@@ -653,27 +631,27 @@ function ButtonBlock() {
 			<schematicsection name="Buttons" />
 			<TS_1187A_B_A_B
 				name="SW3_MODE"
-				pcbX={-38}
-				pcbY={10}
+				pcbX={-44.3}
+				pcbY={19}
 				schSectionName="Buttons"
 			/>
 			<TS_1187A_B_A_B
 				name="SW4_MUTE"
-				pcbX={-38}
-				pcbY={21}
+				pcbX={-44.3}
+				pcbY={27}
 				schSectionName="Buttons"
 			/>
 			<R10K
 				name="R12_MODE_DNP_PULLUP"
-				pcbX={-34}
-				pcbY={5}
+				pcbX={-36}
+				pcbY={14}
 				doNotPlace
 				schSectionName="Buttons"
 			/>
 			<R10K
 				name="R13_MUTE_DNP_PULLUP"
-				pcbX={-27}
-				pcbY={22}
+				pcbX={-23}
+				pcbY={26}
 				doNotPlace
 				schSectionName="Buttons"
 			/>
@@ -691,15 +669,15 @@ function ButtonBlock() {
 			<trace from=".R13_MUTE_DNP_PULLUP > .pin2" to="net.V3_3" />
 			<silkscreentext
 				text="MODE"
-				pcbX={-38}
-				pcbY={6.5}
+				pcbX={-44.3}
+				pcbY={15}
 				fontSize="0.7mm"
 				anchorAlignment="center"
 			/>
 			<silkscreentext
 				text="BOOP / MUTE"
-				pcbX={-38}
-				pcbY={17.5}
+				pcbX={-44.3}
+				pcbY={23}
 				fontSize="0.7mm"
 				anchorAlignment="center"
 			/>
@@ -709,7 +687,13 @@ function ButtonBlock() {
 
 export default function VibeGoblinRp2040Mini() {
 	return (
-		<board title="Vibe Goblin RP2040 Mini" layers={4} borderRadius="3mm">
+		<board
+			title="Vibe Goblin RP2040 Mini"
+			width="96mm"
+			height="66mm"
+			layers={4}
+			borderRadius="3mm"
+		>
 			{/*
         Firmware notes: sample GPIO26/ADC0 microphone audio, compute envelope/RMS,
         classify short peaks as KNOCK?, repeated peaks as CHECK, and sustained loud
